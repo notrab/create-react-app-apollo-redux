@@ -3,12 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "flow-bin": "^0.46.0",
+    "graphql": "^0.9.6",
+    "graphql-tag": "^2.0.0",
     "react": "^15.5.4",
-    "react-apollo": "^1.1.0",
-    "react-dom": "^15.5.4",
-    "react-ga": "^2.2.0",
-    "react-router-dom": "^4.1.1",
-    "subscriptions-transport-ws": "^0.5.5"
+    "react-dom": "^15.5.4"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"
@@ -17,6 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "flow": "flow"
   }
 }

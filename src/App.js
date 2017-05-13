@@ -1,16 +1,5 @@
 import React from 'react'
-import {
-  BrowserRouter as Router,
-  Route
-} from 'react-router-dom'
-import Home from './Home'
 
-const App = props => (
-  <Router>
-    <div>
-      <Route exact path="/" component={Home} />
-    </div>
-  </Router>
-)
+const App = props => <div><h1>create-react-app-apollo</h1></div>
 
 export default App
