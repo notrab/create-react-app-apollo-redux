@@ -1,5 +1,5 @@
 {
-  "name": "create-react-app-apollo",
+  "name": "create-react-app-apollo-redux",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,6 +9,9 @@
     "react": "^15.5.4",
     "react-apollo": "^1.2.0",
     "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
     "serve": "^5.1.5"
   },
   "devDependencies": {
