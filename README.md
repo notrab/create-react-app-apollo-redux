@@ -1,4 +1,4 @@
-# create-react-app-apollo
+# create-react-app-apollo-redux
 
 ```
 REACT_APP_GRAPHQL_URI=
