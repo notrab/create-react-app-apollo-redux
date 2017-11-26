@@ -1,29 +1,14 @@
-import {
-  ApolloClient,
-  createNetworkInterface
-} from 'react-apollo'
-
-const networkInterface = createNetworkInterface({
-  uri: process.env.REACT_APP_GRAPHQL_URI
-})
-
-networkInterface.use([{
-  applyMiddleware(req, next) {
-    let token = localStorage.getItem('token')
-
-    req.options.headers = {
-      authorization: token ? `Bearer ${token}` : null,
-      ...req.options.headers
-    }
-
-    next()
-  }
-}])
+import { ApolloClient } from 'apollo-client';
+import { HttpLink } from 'apollo-link-http';
+import { InMemoryCache } from 'apollo-cache-inmemory';
 
 const client = new ApolloClient({
-  networkInterface,
-  dataIdFromObject: o => o.id,
-  connectToDevTools: process.env.NODE_ENV === 'development'
-})
+  link: new HttpLink({
+    uri: process.env.REACT_APP_GRAPHQL_URI
+  }),
+  cache: new InMemoryCache(),
+  connectToDevTools: process.env.NODE_ENV === 'development',
+  dataIdFromObject: o => o.id
+});
 
-export default client
+export default client;
